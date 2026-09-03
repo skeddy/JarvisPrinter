@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jarvis Print Centre</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #111827;
+    color: #f9fafb;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+.header p {
+    color: #9ca3af;
+    margin: 8px 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #064e3b;
+    color: #6ee7b7;
+    font-size: 14px;
+}
+
+.card {
+    background: #1f2937;
+    border-radius: 14px;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 1px solid #374151;
+    border-radius: 8px;
+    background: #111827;
+    color: #f9fafb;
+    padding: 12px 15px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+.secondary {
+    background: #374151;
+}
+
+.secondary:hover {
+    background: #4b5563;
+}
+
+.quick-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.quick-buttons button {
+    flex: 1;
+    min-width: 180px;
+}
+
+.shopping-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.shopping-item input {
+    flex: 1;
+}
+
+.remove {
+    margin: 0;
+    background: #374151;
+}
+
+#result {
+    display: none;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background: #064e3b;
+    color: #6ee7b7;
+}
+
+.footer {
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>JARVIS PRINT CENTRE</h1>
+        <div class="status">● Printer Online</div>
+    </div>
+
+    <div class="card">
+
+        <h2>🧾 Print a Message</h2>
+
+        <input
+            id="title"
+            type="text"
+            value="JARVIS"
+            placeholder="Receipt title"
+        >
+
+        <br><br>
+
+        <textarea
+            id="message"
+            placeholder="Type something to print..."
+        ></textarea>
+
+        <button onclick="printMessage()">
+            PRINT MESSAGE
+        </button>
+
+        <div id="result"></div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>🛒 Shopping List</h2>
+
+        <div id="shopping-list">
+
+            <div class="shopping-item">
+                <input type="text" placeholder="Item">
+            </div>
+
+            <div class="shopping-item">
+                <input type="text" placeholder="Item">
+            </div>
+
+            <div class="shopping-item">
+                <input type="text" placeholder="Item">
+            </div>
+		
+            <div class="shopping-item">
+                <input type="text" placeholder="Item">
+            </div>
+
+            <div class="shopping-item">
+                <input type="text" placeholder="Item">
+            </div>
+
+            <div class="shopping-item">
+                <input type="text" placeholder="Item">
+            </div>
+
+        </div>
+
+        <button class="secondary" onclick="addItem()">
+            + ADD ITEM
+        </button>
+
+        <button onclick="printShopping()">
+            PRINT SHOPPING LIST
+        </button>
+
+    </div>
+	
+<div class="card">
+
+    <h2>🤖 Ask Jarvis</h2>
+
+    <p style="
+        margin-top: -10px;
+        margin-bottom: 15px;
+        opacity: 0.7;
+    ">
+        Ask me anything and I'll print the answer.
+    </p>
+
+    <textarea
+        id="jarvis-question"
+        placeholder="What do you want to know?"
+        rows="4"
+        style="
+            width: 100%;
+            box-sizing: border-box;
+            resize: vertical;
+        "
+    ></textarea>
+
+    <button
+        onclick="askJarvis()"
+        style="width: 100%; margin-top: 12px;"
+    >
+        🤖 ASK & PRINT
+    </button>
+
+<div
+    id="ask-result"
+    style="
+        display: none;
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        line-height: 1.5;
+    "
+></div>
+
+</div>
+
+<div class="card">
+
+    <h2>⚡ Quick Print</h2>
+
+    <div class="quick-buttons">
+
+        <button onclick="testPrint()">
+            TEST RECEIPT
+        </button>
+
+        <button onclick="printJoke()">
+            DAD JOKE
+        </button>
+
+    </div>
+
+    <button
+        class="secondary"
+        onclick="restartJarvis()"
+        style="width: 100%; margin-top: 20px;">
+        ⚙ RESTART JARVIS
+    </button>
+
+    <div id="restart-result"
+         style="
+            display:none;
+            margin-top:15px;
+            padding:12px;
+            border-radius:8px;
+            background:#374151;
+            color:#d1d5db;
+         ">
+    </div>
+
+</div>
+
+    <div class="footer">
+        Jarvis Print Engine · Epson TM-m30II · 192.168.1.200
+    </div>
+
+</div>
+
+<script>
+
+async function sendPrint(endpoint, data) {
+
+    const result = document.getElementById("result");
+
+    result.style.display = "block";
+    result.innerText = "Sending to printer...";
+
+    try {
+
+        const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const json = await response.json();
+
+        if (json.success) {
+            result.innerText = "✓ Printed successfully";
+        } else {
+            result.innerText = "Printer error: " + json.error;
+        }
+
+    } catch (error) {
+        result.innerText = "Connection error: " + error;
+    }
+}
+
+
+function printMessage() {
+
+    const title =
+        document.getElementById("title").value || "JARVIS";
+
+    const message =
+        document.getElementById("message").value;
+
+    if (!message.trim()) {
+        alert("Please enter something to print.");
+        return;
+    }
+
+    sendPrint("/print", {
+        title: title,
+        text: message
+    });
+}
+
+
+function addItem() {
+
+    const container =
+        document.getElementById("shopping-list");
+
+    const div =
+        document.createElement("div");
+
+    div.className = "shopping-item";
+
+    div.innerHTML = `
+        <input type="text" placeholder="Item">
+        <button class="remove"
+                onclick="this.parentElement.remove()">
+            ×
+        </button>
+    `;
+
+    container.appendChild(div);
+}
+
+
+function printShopping() {
+
+    const inputs =
+        document.querySelectorAll(
+            "#shopping-list input"
+        );
+
+    const items = [];
+
+    inputs.forEach(input => {
+
+        if (input.value.trim()) {
+            items.push(input.value.trim());
+        }
+
+    });
+
+    if (items.length === 0) {
+        alert("Please add at least one item.");
+        return;
+    }
+
+    sendPrint("/shopping", {
+        items: items
+    });
+}
+
+
+function testPrint() {
+
+    sendPrint("/print", {
+        title: "JARVIS",
+        text:
+            "Hello Rob!\n\n" +
+            "The Jarvis Print Centre is working.\n\n" +
+            "Windows 11 -> Ethernet -> Epson\n" +
+            "TM-m30II @ 192.168.1.200"
+    });
+}
+
+
+function printJoke() {
+
+    sendPrint("/print", {
+        title: "DAD JOKE",
+        text:
+            "Why did the scarecrow win an award?\n\n" +
+            "Because he was outstanding in his field."
+    });
+}
+
+async function askJarvis() {
+
+    const questionBox =
+        document.getElementById("jarvis-question");
+
+    const result =
+        document.getElementById("ask-result");
+
+    const question =
+        questionBox.value.trim();
+
+
+    if (!question) {
+
+        result.style.display = "block";
+
+        result.innerHTML =
+            "<strong>Please enter a question.</strong>";
+
+        return;
+    }
+
+
+    result.style.display = "block";
+
+    result.innerHTML =
+        "<strong>Question:</strong><br>" +
+        escapeHtml(question) +
+        "<br><br>" +
+        "<strong>🤖 Jarvis:</strong><br>" +
+        "Thinking...";
+
+
+    try {
+
+        const response =
+            await fetch(
+                "/ask",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        question: question
+                    })
+                }
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (!data.success) {
+
+            result.innerHTML =
+                "<strong>Question:</strong><br>" +
+                escapeHtml(question) +
+                "<br><br>" +
+                "❌ " +
+                escapeHtml(data.error);
+
+            return;
+        }
+
+
+        result.innerHTML =
+            "<strong>Question:</strong><br>" +
+            escapeHtml(question) +
+            "<br><br>" +
+            "<strong>🤖 Jarvis:</strong><br>" +
+            escapeHtml(data.answer)
+                .replace(/\n/g, "<br>");
+
+
+        questionBox.value = "";
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        result.innerHTML =
+            "<strong>Question:</strong><br>" +
+            escapeHtml(question) +
+            "<br><br>" +
+            "❌ Something went wrong.";
+
+    }
+}
+
+
+function escapeHtml(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+}
+async function restartJarvis() {
+
+    const result =
+        document.getElementById("restart-result");
+
+    result.style.display = "block";
+    result.innerText = "⚙ Restarting Jarvis...";
+
+    try {
+
+        const response = await fetch(
+            "/restart",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                },
+                body: "{}"
+            }
+        );
+
+        const json =
+            await response.json();
+
+        if (!json.success) {
+
+            result.innerText =
+                "Restart failed: " +
+                json.error;
+
+            return;
+        }
+
+        result.innerText =
+            "✓ Restarting...";
+
+        // Give the new server time to start.
+        setTimeout(
+            () => {
+                window.location.reload();
+            },
+            2500
+        );
+
+    } catch (error) {
+
+        // The old server has probably already
+        // shut itself down. Wait for the new
+        // server and reload the page.
+        result.innerText =
+            "✓ Jarvis is restarting...";
+
+        setTimeout(
+            () => {
+                window.location.reload();
+            },
+            2500
+        );
+    }
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,395 @@
+Jarvis exited with code 0: Thu Sep  3 19:31:56 IST 2026
+Restart requested. Restarting Jarvis...
+Starting Jarvis: Thu Sep  3 19:31:57 IST 2026
+================================
+       JARVIS PRINT CENTRE
+================================
+
+Web interface: http://localhost:8080
+Server directory: /volume1/_Shared/Jarvis
+Printer: 192.168.1.200:9100
+
+Endpoints:
+  GET  /
+  POST /print
+  POST /shopping
+  POST /ask
+  POST /restart
+
+Press CTRL+C to stop.
+
+[SERVER] 192.168.1.10 - "GET / HTTP/1.1" 200 -
+[JARVIS] Question: Just another test.
+[SERVER] 192.168.1.10 - "POST /ask HTTP/1.1" 200 -
+[JARVIS] Restart requested.
+[JARVIS] Restart flag created: /volume1/_Shared/Jarvis/restart.flag
+[SERVER] 192.168.1.10 - "POST /restart HTTP/1.1" 200 -
+Jarvis exited with code 0: Thu Sep  3 19:35:28 IST 2026
+Restart requested. Restarting Jarvis...
+Starting Jarvis: Thu Sep  3 19:35:29 IST 2026
+================================
+       JARVIS PRINT CENTRE
+================================
+
+Web interface: http://localhost:8080
+Server directory: /volume1/_Shared/Jarvis
+Printer: 192.168.1.200:9100
+
+Endpoints:
+  GET  /
+  POST /print
+  POST /shopping
+  POST /ask
+  POST /restart
+
+Press CTRL+C to stop.
+
+[SERVER] 192.168.1.10 - "GET / HTTP/1.1" 200 -
+[SERVER] 192.168.1.10 - "POST /print HTTP/1.1" 200 -
+[JARVIS] Restart requested.
+[JARVIS] Restart flag created: /volume1/_Shared/Jarvis/restart.flag
+[SERVER] 192.168.1.10 - "POST /restart HTTP/1.1" 200 -
+Jarvis exited with code 0: Thu Sep  3 19:36:22 IST 2026
+Restart requested. Restarting Jarvis...
+Starting Jarvis: Thu Sep  3 19:36:23 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:24 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:27 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:27 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:30 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:31 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:34 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:34 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:37 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:37 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:41 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:41 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:44 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:44 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:47 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:48 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:51 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:51 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:54 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:55 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:36:58 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:36:58 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:01 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:02 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:05 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:05 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:08 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:08 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:12 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:12 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:15 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:15 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:18 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:19 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:22 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:22 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:25 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:26 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:29 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:29 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:32 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:33 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:36 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:36 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:39 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:40 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:43 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:43 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:46 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:46 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:49 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:50 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:53 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:53 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:37:56 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:37:57 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:38:00 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:38:00 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:38:03 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:38:04 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:38:07 IST 2026
+Traceback (most recent call last):
+  File "/volume1/_Shared/Jarvis/server.py", line 10, in <module>
+    from printer import print_receipt
+  File "/volume1/_Shared/Jarvis/printer.py", line 59
+    data += b"\n\n\n\n\n"
+    ^
+IndentationError: unexpected indent
+Jarvis exited with code 1: Thu Sep  3 19:38:07 IST 2026
+Jarvis stopped unexpectedly.
+Restarting in 3 seconds...
+Starting Jarvis: Thu Sep  3 19:38:10 IST 2026
